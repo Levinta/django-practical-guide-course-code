@@ -13,7 +13,7 @@
 <section id="summary">
   <h2>{{ post.title }}</h2>
   <div>
-    {% for tag in post_tags %}
+    {% for tag in post.tags.all %}
       <span class="tag">{{ tag.caption }}</span>
     {% endfor %}
   </div>
