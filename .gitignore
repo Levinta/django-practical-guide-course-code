@@ -1,0 +1,19 @@
+blog_venv/
+# Python related settings
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE related files
+.vscode/
+*.idea/
+*.vscode/
+*.swp
+*.swo
+*.swn
+*.pyc
+.DS_Store
+db.sqlite3
