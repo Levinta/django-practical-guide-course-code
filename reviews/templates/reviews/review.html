@@ -1,0 +1,29 @@
+<!-- FILEPATH: /Users/roman/Learn/Python/django-projects/main-blog/reviews/templates/reviews/review.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review</title>
+</head>
+<body>
+    <h1>Review</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        <div>
+            {{ field.label_tag }} {{ field }}
+            {% if field.help_text %}
+            <small style="color: grey;">{{ field.help_text }}</small>
+            {% endif %}
+            {% if field.errors %}
+            <p style="color: red;">{{ field.errors }}</p>
+            {% endif %}
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+    <br/>
+{% if review %}
+{{ review }}
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>Review ID</th>
+      <th>Author</th>
+      <th>Content</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for review in reviews %}
+    <tr>
+      <td>{{ review.id }}</td>
+      <td>{{ review.user_name }}</td>
+      <td>{{ review.review_text }}</td>
+      <td>{{review.rating}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
