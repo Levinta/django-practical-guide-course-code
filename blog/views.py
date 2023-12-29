@@ -28,6 +28,12 @@ class StartingPageView(ListView):
     ordering = "-date"
     paginate_by = 3
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        data = queryset[:3]
+        return data
+
+
 # def starting_page(request):
 #     latest_posts = Post.objects.all().order_by("-date")[:3]
 #     return render(request, "blog/index.html", {
